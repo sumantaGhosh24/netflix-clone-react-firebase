@@ -20,7 +20,6 @@ export default function SignUp() {
 
   const handleSignup = (event) => {
     event.preventDefault();
-
     return firebase
       .auth()
       .createUserWithEmailAndPassword(emailAddress, password)
@@ -48,7 +47,6 @@ export default function SignUp() {
         <Form>
           <Form.Title>Sign Up</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
-
           <Form.Base onSubmit={handleSignup} method="POST">
             <Form.Input
               placeholder="First name"
@@ -67,15 +65,10 @@ export default function SignUp() {
               placeholder="Password"
               onChange={({target}) => setPassword(target.value)}
             />
-            <Form.Submit
-              disabled={isInvalid}
-              type="submit"
-              data-testid="sign-up"
-            >
+            <Form.Submit disabled={isInvalid} type="submit">
               Sign Up
             </Form.Submit>
           </Form.Base>
-
           <Form.Text>
             Already a user? <Form.Link to="/signin">Sign in now.</Form.Link>
           </Form.Text>

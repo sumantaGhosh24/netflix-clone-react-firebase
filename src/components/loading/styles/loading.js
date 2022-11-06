@@ -18,7 +18,6 @@ export const Spinner = styled.div`
   height: 100%;
   background-color: black;
   z-index: 999;
-
   :after {
     content: "";
     position: absolute;
@@ -36,7 +35,6 @@ export const Spinner = styled.div`
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
-
   @-ms-keyframes spin {
     from {
       -ms-transform: rotate(0deg);
@@ -45,7 +43,6 @@ export const Spinner = styled.div`
       -ms-transform: rotate(360deg);
     }
   }
-
   @-moz-keyframes spin {
     from {
       -moz-transform: rotate(0deg);
@@ -54,7 +51,6 @@ export const Spinner = styled.div`
       -moz-transform: rotate(360deg);
     }
   }
-
   @-webkit-keyframes spin {
     from {
       -webkit-transform: rotate(0deg);
@@ -63,7 +59,6 @@ export const Spinner = styled.div`
       -webkit-transform: rotate(360deg);
     }
   }
-
   @keyframes spin {
     from {
       transform: rotate(0deg);

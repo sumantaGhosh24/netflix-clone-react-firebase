@@ -28,7 +28,6 @@ export default function Home() {
           </OptForm>
         </Feature>
       </HeaderContainer>
-
       <JumbotronContainer />
       <FaqsContainer />
       <FooterContainer />

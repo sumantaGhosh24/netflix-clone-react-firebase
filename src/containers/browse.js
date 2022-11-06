@@ -33,7 +33,6 @@ export function BrowseContainer({slides}) {
       keys: ["data.description", "data.title", "data.genre"],
     });
     const results = fuse.search(searchTerm).map(({item}) => item);
-
     if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
       setSlideRows(results);
     } else {
@@ -44,7 +43,6 @@ export function BrowseContainer({slides}) {
   return profile.displayName ? (
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
-
       <Header src="joker1" dontShowOnSmallViewPort>
         <Header.Frame>
           <Header.Group>
@@ -83,7 +81,6 @@ export function BrowseContainer({slides}) {
             </Header.Profile>
           </Header.Group>
         </Header.Frame>
-
         <Header.Feature>
           <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
           <Header.Text>
@@ -96,7 +93,6 @@ export function BrowseContainer({slides}) {
           <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
-
       <Card.Group>
         {slideRows.map((slideItem) => (
           <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
